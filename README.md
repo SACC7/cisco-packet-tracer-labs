@@ -41,7 +41,7 @@ This is my master repository where I archive and document my daily practical lab
 ---
 
 ## 📫 Connect with Me
-* 💼 **LinkedIn:** [Your LinkedIn Profile Link Here]
-* 📧 **Email:** [Your Email Here]
+* 💼 **LinkedIn:** [https://www.linkedin.com/in/senjil-jose-6a5489319/]
+* 📧 **Email:** [josesenjil@gmail.com]
 
 *Feel free to explore my repositories, raise an issue, or connect with me for networking discussions!* 😊
