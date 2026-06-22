@@ -53,3 +53,61 @@ ip route 192.168.30.0 255.255.255.0 10.0.0.10
 ip route 10.0.0.4 255.255.255.252 10.0.0.2
 end
 write memory
+
+Router 1
+
+Router> enable
+Router# configure terminal
+
+! LAN Interface
+interface GigabitEthernet0/1
+ ip address 192.168.20.1 255.255.255.0
+ no shutdown
+ exit
+
+! WAN to Router0
+interface GigabitEthernet0/0
+ ip address 10.0.0.2 255.255.255.252
+ no shutdown
+ exit
+
+! WAN to Router2
+interface GigabitEthernet0/2
+ ip address 10.0.0.5 255.255.255.252
+ no shutdown
+ exit
+
+! Static Routing
+ip route 192.168.10.0 255.255.255.0 10.0.0.1
+ip route 192.168.30.0 255.255.255.0 10.0.0.6
+ip route 10.0.0.8 255.255.255.252 10.0.0.6
+end
+write memory
+Router 2
+Router> enable
+Router# configure terminal
+
+! LAN Interface
+interface GigabitEthernet0/1
+ ip address 192.168.30.1 255.255.255.0
+ no shutdown
+ exit
+
+! WAN to Router0
+interface GigabitEthernet0/0
+ ip address 10.0.0.10 255.255.255.252
+ no shutdown
+ exit
+
+! WAN to Router1
+interface GigabitEthernet0/2
+ ip address 10.0.0.6 255.255.255.252
+ no shutdown
+ exit
+
+! Static Routing
+ip route 192.168.10.0 255.255.255.0 10.0.0.9
+ip route 192.168.20.0 255.255.255.0 10.0.0.5
+ip route 10.0.0.0 255.255.255.252 10.0.0.5
+end
+write memory
